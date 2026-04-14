@@ -1,0 +1,111 @@
+:root {
+    --primary-pink: #ffb7c5;   
+    --accent-pink: #ff8fa3;    
+    --bg-pink: #fff5f7;         
+    --text-color: #4a4a4a;
+    --white: #ffffff;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-pink);
+    color: var(--text-color);
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--white);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-pink);
+}
+
+header h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    color: var(--accent-pink);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--accent-pink);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+article {
+    background-color: var(--white);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(255, 183, 197, 0.2);
+}
+
+.post-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--accent-pink);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+time {
+    color: #999;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+p {
+
+    max-width: 38rem; 
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--accent-pink);
+    text-decoration: none;
+    border-bottom: 2px dashed var(--accent-pink);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border-bottom: 2px solid var(--accent-pink);
+}
+
+.evaluation {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--bg-pink);
+}
+
+h3 {
+    color: var(--accent-pink);
+    font-size: 1.4rem;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 1rem;
+    font-size: 0.8rem;
+    color: #bbb;
+}
