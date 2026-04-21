@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 2</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f0f0; }
+        #container { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; }
+        p { font-size: 1.2em; }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1 id="main-heading">Result will appear here</h1>
+        <div id="display-area"></div>
+    </div>
+
+    <script>
+        /* This program prompts the user for their name and a number,
+           picks a random food using a function that returns data,
+           and uses a loop to display a repeating message on the page.
+        */
+
+        //foods 
+        var food = ["cheese", "fruit", "chicken", "pie", "sushi", "pizza"];
+
+        //Refactored randomInt function
+        function randomInt(min, max) {
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        // Main function to run the experiment
+        function runExperiment() {
+            // Get user input using prompt() 
+            var name = prompt("Please tell me your name", "");
+            var userNum = prompt("Enter a number (how many times to repeat?)", "3");
+            
+            // Selection if/else for flow control
+            if (name == "" || name == null) {
+                name = "Friend";
+            }
+
+            // Call randomInt and get returned data 
+            var randomIndex = randomInt(0, 5);
+            var luckyFood = food[randomIndex];
+
+            //Change the heading 
+            var heading = document.getElementById('main-heading');
+            heading.innerHTML = "Hello, " + name + "!";
+
+            // Using a loop to create content
+            var displayArea = document.getElementById('display-area');
+            var message = "<p>Your lucky food is:" + luckyFood + "</p>";
+            
+            var repeatedText = "<ul>";
+            for (var i = 0; i < userNum; i++) {
+                repeatedText += "<li>Lucky loop number " + (i + 1) + " for " + name + "!</li>";
+            }
+            repeatedText += "</ul>";
+
+            // Output the final result to the DOM
+            displayArea.innerHTML = message + repeatedText;
+        }
+
+        // Call the function to make it run 
+        runExperiment();
+
+    </script>
+</body>
+</html>
