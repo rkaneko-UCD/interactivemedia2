@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs 2.0 - Fantasy Pop Adventure</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;600&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Mad Libs 2.0</h1>
+        <p class="subtitle">Fill in the blanks to create your unique story</p>
+        
+    </header>
+
+    <main>
+        <section id="input-area">
+            <form id="madlibsForm">
+                <div class="form-group">
+                
+                    <label for="adjective1">[adjective]</label>
+                    <input type="text" id="adjective1" placeholder="e.g., mysterious" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="place">[place]</label>
+                    <input type="text" id="place" placeholder="e.g., Tokyo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="noun">[noun] </label>
+                    <input type="text" id="noun" placeholder="e.g., wizard" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="verbIng">[verb -ing]</label>
+                    <input type="text" id="verbIng" placeholder="e.g., dancing" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adjective2">[adjective]</label>
+                    <input type="text" id="adjective2" placeholder="e.g., cheerful" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pluralNoun">[plural noun]</label>
+                    <input type="text" id="pluralNoun" placeholder="e.g., clouds" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emotion">[emotion -ness]</label>
+                    <input type="text" id="emotion" placeholder="e.g., joyfulness" required>
+                </div>
+
+                <input type="submit" value="GENERATE STORY!">
+            </form>
+        </section>
+
+        <section id="result-area">
+            <div class="image-container">
+                <img src="images/marshmallow.jpg" alt="Illustration" width="600" height="190">
+            </div>
+
+            <div id="storyOutput" class="story-output empty">
+                <div class="story-annotation">Your Story</div>
+                <p class="placeholder-text">
+                    When you click the GENERATE STORY! button, text will be generated here!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+       Reina Kaneko
+    </footer>
+</body>
+</html>

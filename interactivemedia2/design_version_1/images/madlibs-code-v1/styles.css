@@ -1,0 +1,74 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    width: 1200px;
+    height: 750px;
+    overflow: hidden;
+    background: linear-gradient(148deg, #fccee8 0%, #fef9c2 50%, #a2f4fd 100%);
+    font-family: 'Fredoka', sans-serif;
+    padding: 20px 40px; 
+}
+
+header { height: 60px; margin-bottom: 5px; }
+h1 { font-family: 'Chewy', cursive; font-size: 36px; color: #f6339a; }
+.subtitle { font-family: 'Comic Neue', cursive; font-size: 13px; color: #9810fa;
+margin-top: -20px; }
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 580px;
+    margin-top: 20px;
+}
+
+#input-area { width: 350px; }
+.form-group { margin-bottom: 4px; }
+label { display: block; font-size: 11px; font-weight: 600; margin-bottom: 1px; }
+input[type="text"] {
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+input[type="text"]:focus { border-color: #ff8904; outline: none; box-shadow: 0 0 5px rgba(255, 137, 4, 0.5); }
+
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    background: linear-gradient(90deg, #f6339a, #ad46ff, #00b8db);
+    color: white;
+    font-family: 'Chewy', cursive;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#result-area { width: 720px; display: flex; flex-direction: column; gap: 10px; }
+
+.image-container {
+    height: 190px; 
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    overflow: hidden;
+    position: relative;
+}
+
+.story-output {
+    height: 190px; 
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    overflow-y: auto;
+}
+
+footer { position: absolute; bottom: 10px; font-size: 10px; color: #888; }
+.user-word { font-weight: bold; color: #f6339a; background: #ffe6f5; padding: 0 4px; }
