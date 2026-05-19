@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Picture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main id="viewport">
+        <div id="start-screen">
+            <div class="start-content">
+                <h1>My Memory Art Gallery</h1>
+                <p>See my growth as a community college art major</p>
+                <button id="start-btn">Start Drawing</button>
+            </div>
+        </div>
+
+        <div id="ui-guide" class="hidden">
+            <p>Use <span class="key">◀</span> <span class="key">▶</span> keys to move</p>
+        </div>
+
+        <div id="background-track" class="hidden">
+            <section class="station" id="station1">
+                <div class="canvas-wrapper">
+                    <span class="status-label" id="status1"></span>
+                    <img src="images/canvaspic.png" alt="Canvas 1" id="canvas1" class="interactive-canvas">
+                </div>
+                <div class="next-indicator hidden" id="next1">Next ▶</div>
+            </section>
+
+            <section class="station" id="station2">
+                <div class="canvas-wrapper">
+                    <span class="status-label" id="status2"></span>
+                    <img src="images/canvaspich.png" alt="Canvas 2" id="canvas2" class="interactive-canvas">
+                </div>
+                <div class="next-indicator hidden" id="next2">Next ▶</div>
+            </section>
+
+            <section class="station" id="station3">
+                <div class="canvas-wrapper">
+                    <span class="status-label" id="status3"></span>
+                    <img src="images/canvaspich.png" alt="Canvas 3" id="canvas3" class="interactive-canvas">
+                </div>
+            </section>
+        </div>
+
+        <div id="character" class="hidden">
+            <img src="images/humanpic1.png" alt="Artist" id="hero-img">
+        </div>
+
+        <button id="restart-btn" class="hidden">Restart Exhibition</button>
+
+        <aside id="art-overlay" class="hidden">
+            <div class="display-container">
+                <button id="close-btn" aria-label="Close details">×</button>
+                <div class="display-content">
+                    <div class="image-area">
+                        <img src="images/drawing1.jpg" alt="Artwork Detail" id="display-img">
+                    </div>
+                    <div class="description-area">
+                        <h2 id="art-title">Artwork Title</h2>
+                        <p id="art-desc">Detailed explanation will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+</body>
+</html>
