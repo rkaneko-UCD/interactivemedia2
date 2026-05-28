@@ -95,6 +95,13 @@
         }
     });
 
+    // close overlay with escape key
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !overlay.classList.contains("hidden")) {
+            closeOverlay();
+        }
+    });
+
     function startDrawingAnimation() {
         let toggle = true;
         animationInterval = setInterval(function () {
@@ -143,7 +150,8 @@
         if (currentStation === 3) handleCanvasClick("station3");
     });
 
-    closeBtn.addEventListener("click", function () {
+    // close function
+    function closeOverlay() {
         overlay.classList.add("hidden");
         
         // character back to center
@@ -181,6 +189,10 @@
                 currentStation = "free"; 
             }, 500);
         }
+    }
+
+    closeBtn.addEventListener("click", function () {
+        closeOverlay();
     });
 
     // exhibition mode - click on canvas to show description
@@ -238,3 +250,4 @@
         character.classList.add("hidden");
     });
 })();
+
