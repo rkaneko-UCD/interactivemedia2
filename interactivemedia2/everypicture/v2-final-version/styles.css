@@ -138,12 +138,20 @@ body {
     position: absolute;
     right: 50px;
     top: 50%;
-    transform: translateY(-50%);
     color: #4a3728; 
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
     pointer-events: none; 
+    /* text guide animation */
+    animation: guideMove 1.5s infinite ease-in-out;
+}
+
+/* text guide animation keyframes */
+@keyframes guideMove {
+    0% { transform: translateY(-50%) translateX(0); opacity: 0.6; }
+    50% { transform: translateY(-50%) translateX(10px); opacity: 1; }
+    100% { transform: translateY(-50%) translateX(0); opacity: 0.6; }
 }
 
 
@@ -282,3 +290,4 @@ body {
         display: none; 
     }
 }
+
